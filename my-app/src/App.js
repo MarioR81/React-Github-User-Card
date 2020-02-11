@@ -1,7 +1,12 @@
 import React from 'react';
 import './App.css';
 
-function App() {
+class App extends React.Component {
+  state = {
+    followers: []
+  };
+  
+  render(){
   return (
     <div className="App">
         <p>
@@ -9,6 +14,7 @@ function App() {
         </p>
     </div>
   );
+  }
 }
 
 export default App;
