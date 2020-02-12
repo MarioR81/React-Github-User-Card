@@ -14,11 +14,8 @@ code {
 }
 .main{
   margin: auto;
-  /* border: 1px solid blue; */
   text-align: center;
-  align-items: center;
-  
-    
+  align-items: center;  
 }
 
 .mainCard{
@@ -33,11 +30,9 @@ code {
   background-color: #f3f3f3;
 }
 .mainCardFlex {
-  /* border: 1px solid green; */
   width: 30%;
 }
 .cardFlex{
-  /* display: flex; */
   align-items: center;
 }
 .followers{
