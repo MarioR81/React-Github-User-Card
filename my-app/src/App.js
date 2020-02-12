@@ -32,25 +32,28 @@ class App extends React.Component {
     .catch(err => console.log(err));
   }
 
-  // componentDidUpdate() {
-    
-  // }
-
   render(){
   return (
-    <div className="App">
-        <h2>Git Hub Highlights</h2>
-        <h2>{this.state.user.login}</h2>
-        <img src={this.state.user.avatar_url}/>
-        <p>Following {this.state.user.following} users</p>
-        <p>Following {this.state.user.following} users</p>
-        <p>Following {this.state.user.following} users</p>
-        <p>Location: {this.state.user.location}</p>
-        <p>Number of GitHub repos: {this.state.user.public_repos}</p>
-        <p>Following {this.state.user.following} users</p>
-        <p>{this.state.user.followers} users following me</p> 
+    <div className='main'>
+        <h1>Git Hub Highlights</h1>
 
+        <div className='mainCard'>
+          <div className='mainCardFlex'>
+            <h1>{this.state.user.login}</h1>
+            <img src={this.state.user.avatar_url}/>
+          </div>
+          <div className='mainCardFlex'>
+            <h2>User Name: {this.state.user.login}</h2>
+            <h2>Bio: {this.state.user.bio}</h2>
+            <h2>Location: {this.state.user.location}</h2>
+            <h2>Number of GitHub repos: {this.state.user.public_repos}</h2>
+            <h2>Following {this.state.user.following} users</h2>
+            <h2>{this.state.user.followers} users following me</h2> 
+          </div>
+        </div>
 
+        <br/>
+        <h2>Followers List</h2>
       {this.state.followers.map((follower, key) => (
         <Card follower={follower} key={key}/>
       ))}

@@ -1,7 +1,4 @@
 import React from 'react';
-import axios from 'axios';
-
-
 
 const Card = ({follower}) => {
     
@@ -9,12 +6,12 @@ const Card = ({follower}) => {
 // console.log(props)
 const {login, avatar_url} = follower
   return (
-    <div className="App">
-
-        <p>User Name: {login}</p>
-        <img src={avatar_url}/>
-        
-    </div>
+        <div className='cardFlex'>            
+            <div className='followers'>
+                <h2>User Name: {login}</h2>
+                <img src={avatar_url} width={'400px'} />
+            </div>
+        </div>
   );
   
 }
